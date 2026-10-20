@@ -3,7 +3,35 @@ body{
 }
 main{
     background-color: cornflowerblue;
+    perspective: 300px;
 }
 a p{
     background-color: aliceblue;
+    width: 30%;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    margin: 15px auto;
+    transition: 0.5s all;
+}
+a p:hover{
+    background-color:blueviolet;
+    transform: scale(1.2);
+    transform: rotate3d(1, 1, 0, 45deg);
+    border-style: solid;
+    animation: rodar3d 3s linear infinite;
+}
+a p:active{
+    border-style: solid;
+}
+@keyframes rodar3d {
+    0% {
+        transform: rotate3d(1, 1, 0, 0deg);
+        background-color: chocolate;
+    }
+    100%{
+        transform: rotate3d(1, 1, 0, 360deg);
+        background-color: blueviolet;
+    }
 }
